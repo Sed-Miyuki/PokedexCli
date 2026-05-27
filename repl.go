@@ -14,11 +14,10 @@ type cliCommand struct{
 }
 
 func startRepl(cfg *config){
-	scanner:=bufio.NewScanner(os.Stdin)
+	reader:=bufio.NewScanner(os.Stdin)
 	for{
 		fmt.Print("Pokedex >")
-		scanner.Scan()
-		text:=scanner.Text()
+		text:=reader.Text()
 		words:=cleanInput(text)
 		if len(words)==0{
 			continue
