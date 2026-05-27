@@ -1,8 +1,12 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
-func callbackExit(cfg *config) error{
-	os.Exit(0)
-	return nil
+func commandExit(cfg *config) error {
+	fmt.Println("Closing the Pokedex.Goodbye...")
+    os.Exit(0)
+    return nil
 }
